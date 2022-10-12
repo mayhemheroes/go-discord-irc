@@ -1,12 +1,11 @@
 package fuzz
 
-import "github.com/qaisjp/go-discord-irc/dstate"
-import "github.com/bwmarrin/discordgo"
+import "github.com/qaisjp/go-discord-irc/irc/format"
 
 func mayhemit(bytes []byte) int {
     content := string(bytes)
-    var test discordgo.Session
-    dstate.ChannelMessage(&test, content, content)
+
+    ircf.Parse(content)
     return 0
 }
 
