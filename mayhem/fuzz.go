@@ -1,11 +1,12 @@
 package fuzz
 
-import "github.com/qaisjp/go-discord-irc"
+import "github.com/qaisjp/go-discord-irc/dstate"
+import "github.com/bwmarrin/discordgo"
 
 func mayhemit(bytes []byte) int {
     content := string(bytes)
-    var test bridge.Bridge
-    test.SetIRCListenerName(content)
+    var test discordgo.Session
+    dstate.ChannelMessage(&test, content, content)
     return 0
 }
 
