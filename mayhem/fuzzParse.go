@@ -1,4 +1,4 @@
-package fuzz
+package fuzzParse
 
 import "github.com/qaisjp/go-discord-irc/irc/format"
 
