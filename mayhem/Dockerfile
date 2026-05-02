@@ -1,4 +1,4 @@
-FROM golang:1.18 as builder
+FROM golang:1.23 as builder
 
 COPY . /go-discord-irc
 WORKDIR /go-discord-irc/mayhem
